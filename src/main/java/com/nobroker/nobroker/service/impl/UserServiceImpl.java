@@ -14,6 +14,10 @@ public class UserServiceImpl implements UserService {
     private ModelMapper modelMapper;
     @Autowired
     private UserRepository userRepository;
+
+    public User registerUser(User user){
+        return userRepository.save(user);
+    }
     @Override
     public long createUser(UserDto userDto) {
         User user=mapToEntity(userDto);

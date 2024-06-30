@@ -27,6 +27,7 @@ public class OwnerPlanController {
     }
     @GetMapping
     public List<OwnerPlanDto> getAllOwnerPlans(){
+
         return ownerPlanService.getAllOwnerPlans();
     }
 }
